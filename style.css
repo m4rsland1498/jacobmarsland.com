@@ -5,11 +5,20 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
+.top_container {
+    background-color: #448fc4;
     color: #fff;
     padding: 20px;
     text-align: center;
+}
+
+header {
+    background-color: #448fc4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top:0;
 }
 
 nav {
@@ -55,12 +64,12 @@ section {
 
 .subject-box a {
     text-decoration: none;
-    color: #333;
+    color: #333333;
 }
 
 .subject-box:hover {
-    background-color: #d3d3d3;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #81c1f0;
+    box-shadow: 0 6px 12px rgba(22, 121, 179, 0.2);
 }
 
 .subject-box h3 {
@@ -70,7 +79,7 @@ section {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #333;
+    background-color: #448fc4;
     color: #fff;
 }
 
@@ -82,7 +91,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .subject-box {
         max-width: 45%;
