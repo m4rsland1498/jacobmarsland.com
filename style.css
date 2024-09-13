@@ -102,3 +102,46 @@ a:hover {
         max-width: 100%;
     }
 }
+
+.carousel {
+    position: relative;
+    width: auto;
+    margin: auto;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 300px;
+}
+
+.carousel-image {
+    height: 100%;
+    width: auto;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
