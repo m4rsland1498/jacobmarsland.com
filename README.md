@@ -1,2 +1,2 @@
 # jacobmarsland.com
-My website for my Apprenticeship applications!
+This repo is no longer maintained.
