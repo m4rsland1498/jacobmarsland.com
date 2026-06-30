@@ -1,0 +1,183 @@
+/* --- Global Body --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #1a0000;
+}
+
+/* --- Window --- */
+.win-table {
+    border-style: outset;
+    border-color: #a00000 #400000 #400000 #a00000;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+}
+
+.title-bar {
+    font-size: 16px;
+    margin: 2px 5px;
+}
+
+/* --- Headers --- */
+.win-header {
+    background: #82041f; 
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px inset #a00000;
+}
+
+/* --- Gallery Grid --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 15px;
+}
+
+/* --- Photo Paper --- */
+.photo-card {
+    position: relative; /* For peg positioning */
+    margin-top: 25px;   /* Room for peg */
+    background-color: #e2e2e2; 
+    border: 1px solid #999;
+    padding: 10px 10px 25px 10px; 
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.7);
+    transform: rotate(-1.5deg); 
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.photo-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.photo-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.9);
+    z-index: 10;
+}
+
+/* The Peg */
+.photo-card::before {
+    content: "";
+    position: absolute;
+    top: -15px;      
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 30px;
+    background-color: #814444; 
+    border: 1px solid #222;
+    border-radius: 2px;
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Peg Detail */
+.photo-card::after {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    background-color: #200202;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 2px inset #111;
+    display: block;
+    cursor: pointer;
+}
+
+.photo-card img:hover {
+    border: 2px solid #ff0000;
+}
+
+.photo-caption {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #222; 
+}
+
+/* --- LIGHTBOX MODAL STYLES --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95); 
+}
+
+.modal-content-wrapper {
+    margin: auto;
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    background-color: #e2e2e2; 
+    padding: 12px 12px 35px 12px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 60px rgba(255, 0, 0, 0.4);
+}
+
+#modalImg {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh; 
+    border: 2px solid #000;
+}
+
+.modal-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: white;
+    background: #82041f;
+    border: 1px solid #ff0000;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.modal-close:hover {
+    background: #ff0000;
+}
+
+/* --- Sidebar Links --- */
+.nav-link {
+    display: block;
+    padding: 4px;
+    color: #ff4d4d; 
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.nav-link:hover {
+    background-color: #82041f;
+    color: #ffffff;
+}

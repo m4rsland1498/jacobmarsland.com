@@ -1,147 +1,89 @@
+/* --- Global Body --- */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #006a71;
+    background-image: 
+    linear-gradient(to right, white 1px, transparent 1px),
+    linear-gradient(to bottom, white 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: 0 0;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    font-family: "Times New Roman", Times, serif;
 }
 
-.top_container {
-    background-color: #448fc4;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+/* --- The Table Window --- */
+.win-table {
+    border-style: outset;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.3);
 }
 
-header {
-    background-color: #448fc4;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: sticky;
-    top:0;
+.title-bar {
+    font-size: 16px;
+    margin: 2px 5px;
 }
 
-nav {
-    margin-top: 10px;
-}
-
-nav a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-section {
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.subjects {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.subject-box {
-    background-color: #eaeaea;
-    padding: 20px;
-    margin: 10px;
-    flex: 1;
-    max-width: 30%;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.subject-box a {
-    text-decoration: none;
-    color: #333333;
-}
-
-.subject-box:hover {
-    background-color: #81c1f0;
-    box-shadow: 0 6px 12px rgba(22, 121, 179, 0.2);
-}
-
-.subject-box h3 {
+/* --- Headers (Blue gradient feel) --- */
+.win-header {
+    background: #000080;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 2px 6px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #448fc4;
-    color: #fff;
+/* --- Responsive Image Handling --- */
+.photo-frame {
+    background-color: #000;
+    padding: 5px;
+    border: 2px inset #ffffff;
+    display: inline-block;
+    max-width: 90%; /* Keeps it from breaking the table */
 }
 
-a {
-    color: #0066cc;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    .subject-box {
-        max-width: 45%;
-    }
-}
-
-@media (max-width: 480px) {
-    .subject-box {
-        max-width: 100%;
-    }
-}
-
-.carousel {
-    position: relative;
-    width: auto;
-    margin: auto;
-}
-
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    height: 300px;
-}
-
-.carousel-image {
-    height: 100%;
-    width: auto;
-    display: none;
-}
-
-.carousel-image.active {
+#mainPhoto {
     display: block;
+    max-width: 100%; /* Makes image responsive within the frame */
+    height: auto;
+    border: 1px solid #000;
 }
 
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
+/* --- Classic Windows Buttons --- */
+.win-btn {
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 12px;
+    background: #C0C0C0;
+    padding: 4px 12px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    border-right: 2px solid #404040;
+    border-bottom: 2px solid #404040;
     cursor: pointer;
+    box-shadow: 1px 1px 0px #000;
 }
 
-.prev {
-    left: 0;
+.win-btn:active {
+    border-top: 2px solid #404040;
+    border-left: 2px solid #404040;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    padding-top: 5px; /* Tiny shift to look 'pressed' */
+    padding-left: 13px;
+    box-shadow: none;
 }
 
-.next {
-    right: 0;
+/* --- Sidebar Links --- */
+.nav-link {
+    display: block;
+    padding: 4px;
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.nav-link:hover {
+    background-color: #000080;
+    color: #ffffff;
 }

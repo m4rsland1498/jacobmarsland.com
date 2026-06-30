@@ -3,83 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Home - Jacob Marsland">
     <title>Home - Jacob Marsland</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="istyle.css">
 </head>
 <body>
 
-    <div class="top_container">
-        <h1>Jacob Marsland</h1>
-        <p>Software Development</p>
-      </div>
-    <header>
-        <nav>
-            <a href="index.html">About Me</a>
-            <a href="skills.html">Skills</a>
-            <a href="subjects.html">School</a>
-            <a href="index.html#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I am Jacob. This website has been made to be a home for my CV for any applications that I make for degree apprenticeships; I am looking for an apprenticeship in software development.</p>
-        <p>I love computers and technology. I enjoy coding and creating; I like to consider myself a very creative person. A large part of this comes from my love of films as a canvas for art. In fact, I am currently in the process of writing and creating an animated short film made from entirely hand-drawn images. I go to the cinema very often as it is simply my favourite place to be. I love it for the art, the big screen, the incredible speakers, the social viewing, and the purest form of movies.</p>
-        <p>Another form of art I love is photography. I enjoy all forms from abstract to street to graphic design. I enjoy to tell a story, portray a scene, and create emotions. I've shown some of my work below.</p>
-        <p>Back on the computer side of things, I love learning and overcoming logical problems which computers are just perfect for. They are also a place for me to utilise my enjoyment for mathematics.</p>
-        <p>I enjoy and am proficient in problem solving. I have always had a mindset that allows me to think through problems in a way such that I come to an efficient solution. I also see a beauty in the artistry of these mathematical and logic-based challenges from the problems themselves to the working and final solution. It's this admiration and skill for that sparks my interest in computer science as it perfectly encapsulates my love for maths and art.</p>
-    </section>
-
-    <section id="images">
-        <h2>My Photos</h2>
-        <div class="carousel">
-            <button class="prev" onclick="prevImage()">❮</button>
-            <div class="carousel-container">
-                <img src="image1.jpg" alt="Image 1" class="carousel-image" style="display: block;">
-                <img src="image2.jpg" alt="Image 2" class="carousel-image" style="display: none;">
-                <img src="image3.jpg" alt="Image 3" class="carousel-image" style="display: none;">
-                <img src="image4.jpg" alt="Image 4" class="carousel-image" style="display: none;">
-                <img src="image5.jpg" alt="Image 5" class="carousel-image" style="display: none;">
-                <img src="image6.jpg" alt="Image 6" class="carousel-image" style="display: none;">
-                <img src="image8.jpg" alt="Image 8" class="carousel-image" style="display: none;">
-            </div>
-            <button class="next" onclick="nextImage()">❯</button>
+<div class="page-layout">
+    
+    <aside class="side-column">
+        <div class="mini-box">
+            <span class="mini-title">Local Time</span>
+            <p id="clock" style="font-family: 'Courier New', monospace; font-weight: bold; margin: 0;">00:00:00</p>
         </div>
-    </section>
+        <div style="position: relative; height: 150px; margin-top: 20px;">
+            <div style="position: absolute; top: -50px; left: 25px; transform: rotate(-6deg); z-index: 10;">
+                <img src="pol.webp" alt="Polaroid Scan" 
+                    style="width: 190px; height: auto;box-shadow: 5px 8px 15px rgba(0,0,0,0.4);">
+            </div>
+        </div>
+    </aside>
 
-    <script>
-        let currentImageIndex = 0;
-        const images = document.querySelectorAll('.carousel-image');
-    
-        function showImage(index) {
-            images.forEach((img, i) => {
-                img.style.display = i === index ? 'block' : 'none';
-            });
-        }
-    
-        function nextImage() {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-            showImage(currentImageIndex);
-        }
-    
-        function prevImage() {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-            showImage(currentImageIndex);
-        }
-    
-        showImage(currentImageIndex);
-    </script>
+    <div style="flex: 1;">
+        <div class="container">
+            <header>
+                <h1>Jacob Marsland</h1>
+                <p>See a problem? Contact <a href="mailto:admin@jacobmarsland.com" style="color: #00ffff;">admin@jacobmarsland.com</a></p>
+            </header>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to get in touch, feel free to <a href="mailto:jm4rsland@gmail.com">email me</a>.</p>
-    </section>
+            <div class="main-layout">
+                <nav>
+                    <span class="mini-title">Navigation</span>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="updates.html" class="nav-link">Updates</a>
+                    <a href="school.html" class="nav-link">Education</a>
+                    <a href="gallery.html" class="nav-link">Dark Room</a>
+                    <a href="NASAAPIhub.html" class="nav-link">NASA API hub</a>
+                </nav>
 
-    <footer>
-        <p>&copy; 2024 Jacob Marsland</p>
-    </footer>
+                <section class="content-area">
+                    <h2 class="win-header">Intro</h2>
+                    <p>Hi, I am Jacob. This website was originally made to be a home for my CV for any applications that I made whilst searching for degree apprenticeships; read more on these results <a href="school.html">here</a>.</p>
+                    <p>This website is work in progress and will be for the forseeable future.</p>
+                    <p>Visit my Letterboxd profile <a href="https://letterboxd.com/m4rsland/">here</a>.</p>
 
-    <script src="script.js"></script>
+                    <hr>
+
+                    <h2 class="win-header">Knowledge Base</h2>
+                    <div class="highlight-card">
+                        <p>A collection of technical notes and curiosities currently occupying my mind:</p>
+                        <ul style="font-size: 0.95rem; padding-left: 20px;">
+                            <li><b>Satisfactory:</b> I took too long to start this game but after just a week, I am already way too deep.</li>
+                            <li><b>Scrubs:</b> Absolutely loving the new season. It feels very fresh and well modernised. A brilliant season 9 replacement...</li>
+                            <li><b>Photography:</b> I have a lot of roles to develop...</li>
+                        </ul>
+                    </div>
+
+                    <h2 class="win-header">Contact Me</h2>
+                    <p>If you would like to get in touch, feel free to <a href="mailto:jacob@jacobmarsland.com">email me</a>.</p>
+                </section>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content-area">
+                <h2 class="win-header">... Of The Weeks</h2>
+                <div class="scroll-box">
+                    <h3>Film...</h3>
+                    <p><b>Project Hail Mary</b></p>
+                    <p>4★,♥</p>
+                    <p>A brilliant adaptation with great visuals, heartfelt moments, and a lot of fun.</p>
+
+                    <h3>Song...</h3>
+                    <p><b>Caught in the Echo - Foo Fighters</b></p>
+                    <p>Foo FIghters' newest release and their second single from their upcoming album... a whole lot of fun -  this continues their new sound for this album whilst staying very true to themselves.</p>
+
+                    <h3>Website...</h3>
+                    <p><b><a href="https://satisfactory-calculator.com/">Satisfactory Calculator</a></b></p>
+                    <p>I have been obsessed with Satisfactory after finally getting around to playing it this week and this website is very helpful and makes designing large factories much less of a mind chore.</p>
+
+                    <h3>Youtube Video...</h3>
+                    <p><b><a href="https://www.youtube.com/watch?v=mrGfahzt-4Q">Email vs Capitalism, or, Why We Can't Have Nice Things - Dylan Beattie : NDC Conferences</a></b></p>
+                    <p>Entertained my nerdy needs...</p>
+                    
+                    <h3>Tool...</h3>
+                    <p><b>Nearby Glasses</b></p>
+                    <p>An Android apps that notifies you of people recording using smart glasses nearby by identifying the unique Bluetooth signals.</p>
+                </div>
+            </div>
+            <footer>&copy; 2026 Jacob Marsland</footer>
+        </div>
+    </div>
+
+    <aside class="side-column">
+        <div class="mini-box">
+            <span class="mini-title">Quick Links</span>
+            <a href="https://letterboxd.com/m4rsland/" style="font-size: 0.8rem; display: block; margin-bottom: 5px;">Letterboxd</a>
+            <a href="mailto:jacob@jacobmarsland.com" style="font-size: 0.8rem;">Email Me</a>
+        </div>
+        <div class="mini-box">
+            <span class="mini-title">Last Updated</span>
+            <p style="font-size: 0.7rem; margin: 0; font-family: monospace;">March 4, 2026</p>
+        </div>
+    </aside>
+
+</div>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        document.getElementById('clock').innerText = now.toLocaleTimeString();
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
 </body>
 </html>

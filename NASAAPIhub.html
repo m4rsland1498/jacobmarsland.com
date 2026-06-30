@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NASA Open APIs Hub - Jacob Marsland">
+    <title>NASA Open APIs Hub - Jacob Marsland</title>
+    <link rel="stylesheet" href="Nstyle.css">
+    
+    <script src="config.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+</head>
+<body>
+
+<center>
+    <br><br>
+    <table border="3" width="780" cellpadding="0" cellspacing="0" class="win-table">
+        <tr>
+            <td bgcolor="#000080" class="top_container">
+                <h1>NASA Open APIs Hub v1.0</h1>
+                <p style="margin: 0;"><font color="#CCCCCC" size="2" face="Arial">See a problem? Contact <a href="mailto:admin@jacobmarsland.com" style="color: #00FFFF;">admin@jacobmarsland.com</a></font></p>
+            </td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#C0C0C0" style="padding: 5px; border-bottom: 2px solid #808080;">
+                <nav>
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="updates.html" class="nav-link">Updates</a>
+                    <a href="school.html" class="nav-link">Education</a>
+                    <a href="gallery.html" class="nav-link">Dark Room</a>
+                    <a href="NASAAPIhub.html" class="nav-link">NASA API hub</a>
+                </nav>
+            </td>
+        </tr>
+
+        <tr>
+            <td style="padding: 20px;" bgcolor="#C0C0C0">
+                
+                <div class="DONKIdiv">
+                    <h2>Astronomy Picture of the Past 3 Days (APOD)</h2>
+                    <div id="APODdiv"></div>
+                    <script src="APOD.js"></script>
+                    <p align="center">
+                        <font size="1" color="#00FF00" face="Courier New">
+                            [ 2 DAYS AGO ] <---> [ YESTERDAY ] <---> [ TODAY ]
+                        </font>
+                    </p>
+                </div>
+
+                <div class="DONKIdiv">    
+                    <h2>Solar Flare Activity (DONKI)</h2>
+                    <p style="margin-bottom: 10px;"><b>Default Range: Past 30 days</b></p>
+                    
+                    <div style="background: #222; padding: 10px; border: 1px solid #444; margin-bottom: 15px;">
+                        From: <input type="date" id="FLRfrom"> 
+                        To: <input type="date" id="FLRto">
+                    </div>
+
+                    <div style="background-color: #FFFFFF; padding: 5px;">
+                        <canvas id="sfScatter"></canvas>
+                    </div>
+                    <script src="FLR.js"></script>
+                </div>
+
+                <div class="DONKIdiv">
+                    <h2 style="background-color: #333;">Interplanetary Shock Tracker</h2>
+                    <p style="font-size: 11px;">Tracking locations: Earth, Mars, Messenger, STEREO A, STEREO B</p>
+                    
+                    <div style="background: #222; padding: 10px; border: 1px solid #444; margin-bottom: 15px;">
+                        From: <input type="date" id="IPSfrom"> 
+                        To: <input type="date" id="IPSto">
+                    </div>
+
+                    <div class="IPSimages">
+                        <div class="location">
+                            <img src="earth.png" alt="Earth">
+                            <div class="centered" id="earth">0</div>
+                        </div>
+                        <div class="location">
+                            <img src="mars.png" alt="Mars">
+                            <div class="centered" id="mars">0</div>
+                        </div>
+                        <div class="location">
+                            <img src="messenger.png" alt="Messenger">
+                            <div class="centered" id="messenger">0</div>
+                        </div>
+                        <div class="location">
+                            <img src="stereoA.png" alt="STEREO A">
+                            <div class="centered" id="stereoa">0</div>
+                        </div>
+                        <div class="location">
+                            <img src="stereoB.png" alt="STEREO B">
+                            <div class="centered" id="stereob">0</div>
+                        </div>
+                    </div>
+                    <script src="IPS.js"></script>
+                </div>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td bgcolor="#C0C0C0" align="center" style="padding: 10px; border-top: 2px solid #808080;">
+                <font size="2" face="Arial">&copy; 2025 Jacob Marsland | System Status: <font color="#008000"><b>ONLINE</b></font></font>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <font color="#00FF00" face="Courier New" size="2">*** SECURE NASA DATA LINK ESTABLISHED ***</font>
+    <br><br>
+</center>
+
+</body>
+</html>

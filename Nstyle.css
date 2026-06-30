@@ -1,0 +1,157 @@
+/* --- WinZip 1996 Starry Background --- */
+body {
+    background-color: #000000;
+    /* Tiled star pattern effect */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.3) 2px, transparent 40px),
+        radial-gradient(white, rgba(255,255,255,.2) 1px, transparent 30px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 20px 0;
+    font-family: "Times New Roman", Times, serif;
+}
+
+/* --- The Main "Software" Window --- */
+.win-table {
+    border-style: outset;
+    border-width: 3px;
+    border-color: #ffffff #808080 #808080 #ffffff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.8);
+    background-color: #C0C0C0; /* Classic Win95 Silver */
+}
+
+/* --- Win95/WinZip Gradient Title Bar --- */
+.top_container {
+    background: linear-gradient(90deg, #000080 0%, #1084d0 100%);
+    color: #ffffff;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #000;
+}
+
+.top_container h1 {
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* --- Navigation Buttons --- */
+nav {
+    padding: 5px;
+}
+
+.nav-link, nav a {
+    display: inline-block;
+    margin: 2px;
+    padding: 3px 10px;
+    background-color: #C0C0C0;
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: 2px outset #ffffff;
+}
+
+.nav-link:hover, nav a:hover {
+    background-color: #000080;
+    color: #ffffff;
+    border: 2px inset #ffffff;
+}
+
+/* --- NASA Terminal Boxes (DONKI/APOD) --- */
+.DONKIdiv {
+    background-color: #000000; /* Deep Space Black */
+    color: #00FF00; /* Radar Green */
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px inset #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    background-color: #000080;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 16px;
+    margin-top: 0;
+    border: 1px outset #fff;
+}
+
+/* --- Image & APOD Layout --- */
+#APODdiv {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    height: 280px;
+    border: 2px solid #00FF00;
+    margin: 10px 0;
+    background-color: #111;
+}
+
+#APODdiv img {
+    flex: 1;
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+}
+
+/* --- Interplanetary Shock Planet Layout --- */
+.IPSimages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #000;
+    padding: 20px 10px;
+    border: 1px dashed #00FF00;
+}
+
+.location {
+    position: relative;
+    text-align: center;
+}
+
+.IPSimages img {
+    max-width: 70px;
+    height: auto;
+    filter: drop-shadow(0 0 5px #00FF00);
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    font-weight: bold;
+    color: #00FF00;
+    text-shadow: 2px 2px 4px #000;
+    pointer-events: none;
+}
+
+/* --- Form Elements (Inputs) --- */
+input[type="date"] {
+    background-color: #333;
+    color: #00FF00;
+    border: 2px inset #ffffff;
+    padding: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Chart/Canvas Handling --- */
+canvas {
+    background-color: #ffffff; /* Charts need white bg for visibility */
+    border: 2px inset #808080;
+    max-width: 100% !important;
+}
+
+#sfScatter {
+    width: 100% !important;
+    height: auto !important;
+}

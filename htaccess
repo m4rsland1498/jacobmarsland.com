@@ -1,0 +1,4 @@
+#php_value date.timezone Europe/London
+<Files "webfinger">
+    Header always set Content-Type "application/jrd+json"
+</Files>

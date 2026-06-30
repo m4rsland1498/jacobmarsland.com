@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dark Room - Jacob Marsland">
+    <title>Dark Room - Jacob Marsland</title>
+    <link rel="stylesheet" href="darkroom.css">
+</head>
+<body bgcolor="#1a0000"> <center>
+    <br> 
+    <table border="3" width="750" cellpadding="10" cellspacing="0" bgcolor="#3a010d" class="win-table">
+        <tr>
+            <td colspan="2" bgcolor="#600000" align="left" style="padding: 10px; border-bottom: 2px solid #000;">
+                <h1 class="title-bar"><font color="#FFFFFF" face="Arial">Jacob Marsland</font></h1>
+                <p style="margin: 0;"><font color="#CCCCCC" size="2" face="Arial">See a problem? Contact <a href="mailto:admin@jacobmarsland.com" style="color: #ff4d4d;">admin@jacobmarsland.com</a></font></p>
+            </td>
+        </tr>
+        <tr>
+            <td width="150" valign="top" bgcolor="#220000" style="border-right: 2px solid #800000;">
+                <nav>
+                    <p style="color: #ffffff;"><b>Navigation</b></p>
+                    <hr size="1" color="#800000">
+                    <a href="index.html" class="nav-link">Home</a><br>
+                    <a href="updates.html" class="nav-link">Updates</a><br>
+                    <a href="school.html" class="nav-link">Education</a><br>
+                    <a href="gallery.html" class="nav-link">Dark Room</a><br>
+                    <a href="NASAAPIhub.html" class="nav-link">NASA API hub</a>
+                </nav>
+            </td>
+
+            <td width="600" valign="top" bgcolor="#3a010d">
+                <section id="gallery-intro">
+                    <h2 class="win-header">Dark Room</h2>
+                    <p style="color: #ffffff;">Welcome to my Dark Room. This page contains a selection of my photography; click any thumbnail to view the full resolution version (80% webp).</p>
+                </section>
+
+                <hr size="2" color="#800000" style="border-style: inset;">
+
+                <div class="gallery-grid">
+                    <div class="photo-card"><img src="image1.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Butterfly</div></div>
+                    <div class="photo-card"><img src="image2.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Fisherman</div></div>
+                    <div class="photo-card"><img src="image4.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">The Path</div></div>
+                    <div class="photo-card"><img src="image7.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Lighthouse</div></div>
+                    <div class="photo-card"><img src="image8.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Rocks</div></div>
+                    <div class="photo-card"><img src="image10.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Sunset</div></div>
+                    <div class="photo-card"><img src="image3.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Alien</div></div>
+                    <div class="photo-card"><img src="image9.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Flare</div></div>
+                    <div class="photo-card"><img src="image11.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Tree</div></div>
+                    <div class="photo-card"><img src="image12.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Coast</div></div>
+                    <div class="photo-card"><img src="image13.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Sea Water Lake</div></div>
+                    <div class="photo-card"><img src="image14.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Exploration</div></div>
+                    <div class="photo-card"><img src="image15.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">The Sky Above It</div></div>
+                    <div class="photo-card"><img src="image16.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">My Foreground</div></div>
+                    <div class="photo-card"><img src="image6.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">...</div></div>
+                    <div class="photo-card"><img src="image17.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Up</div></div>
+                    <div class="photo-card"><img src="image18.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Planet I</div></div>
+                    <div class="photo-card"><img src="image19.webp" onclick="openModal(this.src)" loading="lazy"><div class="photo-caption">Planet II</div></div>
+                </div>
+                
+                <hr size="2" color="#800000" style="border-style: inset;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" bgcolor="#220000" align="center" style="border-top: 2px solid #800000;">
+                <font size="2" face="Arial" color="#808080">&copy; 2025 Jacob Marsland</font>
+            </td>
+        </tr>
+    </table>
+</center>
+
+<div id="myModal" class="modal" onclick="closeModal()">
+    <div class="modal-content-wrapper">
+        <div class="modal-close">X</div>
+        <img id="modalImg">
+    </div>
+</div>
+
+<script>
+    function openModal(src) {
+        document.getElementById("myModal").style.display = "block";
+        document.getElementById("modalImg").src = src;
+    }
+
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
